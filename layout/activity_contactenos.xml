@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Contactenos">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borde_action_bar"
+        >
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@mipmap/ic_huella_5"
+            app:title="@string/contactenos"
+            app:titleMarginStart="@dimen/margen_titulo_contactenos"
+            app:titleTextAppearance="@style/TextAppearance.Shrine.Headline6"
+            app:titleTextColor="@color/black">
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="44dp">
+
+            <TextView
+                android:id="@+id/tvNombreContacto"
+                android:layout_width="104dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:text="@string/nombre_completo" />
+
+            <AutoCompleteTextView
+                android:id="@+id/etNombre"
+                android:hint="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/escriba_su_nombre_aqu" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCorreo"
+                android:layout_width="88dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:text="@string/direccion_email" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:hint="@+id/etEmail"
+                android:autofillHints="@string/email"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMensaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:maxLines="20"
+                android:text="@string/mensaje" />
+
+            <AutoCompleteTextView
+                android:id="@+id/etMensaje"
+                android:hint="@+id/etMensaje"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/escriba_su_mensaje_aqu"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:gravity="fill_horizontal"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/b_enviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enviar"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.Fragmento_Perfil">
+
+        <LinearLayout
+            android:id="@+id/rl_FragmentPerfil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/fotoPerfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/quimico"
+                    android:paddingTop="5dp"
+                    app:shapeAppearanceOverlay="@style/Circular"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/black"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+                </com.google.android.material.imageview.ShapeableImageView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFotoPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/indie_flower"
+            android:text="@string/dog_perfil"
+            android:textSize="@dimen/tamañoFuente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_FragmentPerfil" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_FragmentPerfil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFotoPerfil"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_perfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/black"
+            android:src="@drawable/ic_camera7_3"
+            app:backgroundTint="@color/gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.904"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.943"
+            android:contentDescription="@string/fab_perfil"
+            android:clickable="true"
+            android:focusable="true"
+
+ />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
